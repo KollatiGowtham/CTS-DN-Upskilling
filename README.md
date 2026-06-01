@@ -4,6 +4,8 @@ This project is a simple Community Event Dashboard developed using HTML5, CSS3, 
 
 The application was created as part of frontend and full-stack learning exercises to understand responsive web design, Bootstrap components, styling techniques, JavaScript interactions, Java programming fundamentals, and database concepts using ANSI SQL.
 
+https://kollatigowtham.github.io/CTS-DN-Upskilling/
+
 ## Features
 
 - Responsive Navigation Bar
