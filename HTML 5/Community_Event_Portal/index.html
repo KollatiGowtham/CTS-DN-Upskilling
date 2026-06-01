@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="mainHeader">
+        <h1 style="color:red;">Local Community Event Portal</h1>
+        <p>Connecting Residents with Community Events</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="help.html" target="_blank">Help</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Banner -->
+    <div id="welcomeBanner">
+        <h2>Welcome Residents!</h2>
+
+        <p class="highlight">
+            Community registrations are now open.
+        </p>
+
+        <p>
+            Special Offer:
+            <span style="color:red; font-weight:bold;">
+                First 50 registrations are free.
+            </span>
+        </p>
+    </div>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Home -->
+        <section id="home">
+            <h2>Home</h2>
+
+            <article>
+                <h3>About the Portal</h3>
+                <p>
+                    This portal helps residents explore upcoming events,
+                    register online, provide feedback, and locate nearby
+                    community programs.
+                </p>
+            </article>
+        </section>
+
+        <!-- Events -->
+        <section id="events">
+
+            <h2>Community Event Gallery</h2>
+
+            <table>
+
+                <tr>
+                    <td>
+                        <img src="../Community_Event_Portal/images/music.jpg" alt="Music Event" title="Music Event" class="gallery-image">
+
+                        <p>Music Festival</p>
+                    </td>
+
+                    <td>
+                        <img src="../Community_Event_Portal/images/sports.png" alt="Sports Event" title="Sports Event" class="gallery-image">
+
+                        <p>Sports Day</p>
+                    </td>
+
+                    <td>
+                        <img src="../Community_Event_Portal/images/coding.jpeg" alt="Workshop" title="Workshop" class="gallery-image">
+
+                        <p>Workshop</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="../Community_Event_Portal/images/art.jpeg" alt="Art Event" title="Art Event" class="gallery-image">
+
+                        <p>Art Exhibition</p>
+                    </td>
+
+                    <td>
+                        <img src="../Community_Event_Portal/images/food.jpeg" alt="Food Festival" title="Food Festival" class="gallery-image">
+
+                        <p>Food Festival</p>
+                    </td>
+
+                    <td>
+                        <img src="../Community_Event_Portal/images/tree_planting.jpg" alt="Tree Plantation" title="Tree Plantation" class="gallery-image">
+
+                        <p>Tree Plantation</p>
+                    </td>
+                </tr>
+
+            </table>
+
+            <div id="eventContainer"></div>
+
+        </section>
+
+        <!-- Registration -->
+        <section id="register">
+
+            <h2>Event Registration</h2>
+
+            <form id="registrationForm">
+
+                <input type="text" name="username" placeholder="Enter Name" required autofocus>
+
+                <input type="email" name="email" placeholder="Enter Email" required>
+
+                <input type="date" required>
+
+                <select id="eventSelect" name="eventType" required>
+
+                    <option value="">
+                        Select Event
+                    </option>
+
+                    <option value="Music">
+                        Music Festival
+                    </option>
+
+                    <option value="Sports">
+                        Sports Day
+                    </option>
+
+                    <option value="Workshop">
+                        Workshop
+                    </option>
+
+                </select>
+
+                <p id="fee"></p>
+
+                <textarea name="message" rows="4" placeholder="Enter Message" required>
+                </textarea>
+
+                <button type="submit" id="registerBtn">  Register </button>
+
+                <output id="outputMessage"></output>
+
+            </form>
+
+        </section>
+
+        <!-- Feedback -->
+        <section id="feedback">
+
+            <h2>Event Feedback</h2>
+
+            <input type="text" id="phone" placeholder="Enter Phone Number">
+
+            <p id="phoneMsg"></p>
+
+            <textarea id="feedbackText" rows="4"  placeholder="Share your feedback"> </textarea>
+
+            <p id="charCount"> Characters: 0 </p>
+
+            <button id="feedbackBtn"> Submit Feedback  </button>
+
+            <p id="feedbackMessage"></p>
+
+        </section>
+
+        <!-- Double Click Image -->
+        <section>
+
+            <h2>Double Click to Enlarge</h2>
+
+            <img
+                src="../Community_Event_Portal/images/simly.png" alt="Community Event" id="eventImage" class="gallery-image" ondblclick="this.classList.toggle('enlarged')">
+
+            <style>
+                .gallery-image.enlarged {
+                    transform: scale(1.5);
+                    transition: transform 0.3s ease;
+                    cursor: zoom-out;
+                    z-index: 100;
+                    position: relative;
+                }
+                .gallery-image {
+                    cursor: zoom-in;
+                    transition: transform 0.3s ease;
+                }
+            </style>
+        </section>
+
+        <!-- Video Section -->
+        <section>
+
+            <h2>Event Promo Video</h2>
+
+            <video width="400" controls id="promoVideo">
+
+                <source src="../Community_Event_Portal/videos/simple.mp4" type="video/mp4">
+
+            </video>
+
+            <p id="videoMessage"></p>
+
+        </section>
+
+        <!-- News Section -->
+        <section>
+
+            <h2>Community Bulletin</h2>
+
+            <div class="news">
+
+                Community events bring residents together
+                through culture, sports, workshops, and
+                educational programs. The city council
+                encourages participation in activities
+                that strengthen local engagement and
+                improve neighborhood relationships.
+
+                Residents can register online, receive
+                updates, and contribute feedback to
+                improve future events.
+
+            </div>
+
+        </section>
+
+        <!-- Geolocation -->
+        <section id="location">
+
+            <h2>Find Nearby Events</h2>
+
+            <button id="locationBtn">
+                Find Nearby Events
+            </button>
+
+            <p id="coordinates"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>Community Portal Services</h3>
+
+        <p>
+            Register • Explore • Participate
+        </p>
+
+        <button id="clearBtn">
+            Clear Preferences
+        </button>
+
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+```css
+/* =========================
+   Universal Selector Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Body Styles
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    background-image: linear-gradient(
+        rgba(240,248,255,0.9),
+        rgba(220,240,255,0.9)
+    );
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* =========================
+   Header Styles
+========================= */
+
+#mainHeader {
+    background: linear-gradient(
+        to right,
+        #2563eb,
+        #60a5fa
+    );
+    color: white;
+    padding: 20px;
+}
+
+/* =========================
+   Navigation Styles
+========================= */
+
+nav {
+    background-color: #dbeafe;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Link Styling */
+
+a:link {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #6b21a8;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+/* =========================
+   Welcome Banner
+========================= */
+
+#welcomeBanner {
+    background-color: rgba(37,99,235,0.9);
+    color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* =========================
+   Section Styling
+========================= */
+
+section {
+    background-color: white;
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+/* Element Selector */
+
+h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+/* Grouping Selector */
+
+h3,
+p {
+    margin: 10px 0;
+}
+
+/* =========================
+   Event Cards
+========================= */
+
+.eventCard {
+    border: 2px solid #2563eb;
+    margin: 15px;
+    padding: 15px;
+    background-color: #eff6ff;
+}
+
+/* =========================
+   Gallery Images
+========================= */
+
+.gallery-image {
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* =========================
+   Table Styling
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f3f4f6;
+}
+
+/* =========================
+   Form Styling
+========================= */
+
+form {
+    width: 80%;
+    margin: auto;
+}
+
+input,
+select,
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid blue;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+/* =========================
+   Video Styling
+========================= */
+
+video {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* =========================
+   Multi Column News
+========================= */
+
+.news {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    text-align: justify;
+}
+
+/* =========================
+   Footer Styles
+========================= */
+
+footer {
+    background-color: #dbeafe;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* =========================
+   Hidden vs None Example
+========================= */
+
+.hiddenExample {
+    visibility: hidden;
+}
+
+.noneExample {
+    display: none;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .gallery-image {
+        width: 100px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        width: 95%;
+    }
+
+    video {
+        width: 90%;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 95%;
+    }
+}
+```
